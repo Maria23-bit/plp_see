@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Khakame - Founder of Creative Akili</title>
+    <!-- Google Fonts - EB Garamond for general text, Roboto for bold/headings -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'EB Garamond', serif; /* EB Garamond for most text */
+            background-color: #FDF8F3; /* Very light cream background */
+            color: #6F4E37; /* Coffee brown text */
+            line-height: 1.6;
+            margin: 0; /* Ensure no default body margin */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .section-heading {
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-weight: 700; /* Bold text */
+            color: #A0522D; /* Sienna brown */
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.875rem; /* text-3xl */
+            line-height: 2.25rem;
+        }
+        @media (min-width: 640px) {
+            .section-heading {
+                font-size: 2.25rem; /* sm:text-4xl */
+                line-height: 2.5rem;
+            }
+        }
+        .card {
+            background-color: #ffffff; /* White card background */
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .btn-primary {
+            background-color: #FF8C00; /* Dark Orange */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem; /* Rounded button */
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75rem;
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-weight: 700; /* Bold text */
+        }
+        .btn-primary:hover {
+            background-color: #E07B00; /* Darker orange on hover */
+        }
+        .nav-link {
+            color: #6F4E37; /* Coffee brown for links */
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #FBEEDD; /* Light cream/orange on hover */
+            color: #A0522D; /* Sienna brown on hover */
+        }
+
+        /* Header & Navigation Specifics */
+        .header {
+            background-color: #ffffff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+            padding-top: 1rem; /* py-4 */
+            padding-bottom: 1rem; /* py-4 */
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .header .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .header .container {
+                flex-direction: row;
+            }
+        }
+        .header-title {
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-size: 1.5rem; /* text-2xl */
+            line-height: 2rem;
+            font-weight: 700; /* Bold text */
+            color: #A0522D; /* Sienna brown */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .header-title {
+                margin-bottom: 0; /* sm:mb-0 */
+            }
+        }
+        .header-nav {
+            display: flex;
+            gap: 1rem; /* space-x-4 */
+        }
+
+        /* Hero Section Specifics */
+        .hero-section {
+            text-align: center;
+            padding-top: 4rem; /* py-16 */
+            padding-bottom: 4rem; /* py-16 */
+            background: linear-gradient(to bottom right, #FDF8F3, #FFF0DB); /* Cream to light orange gradient */
+        }
+        .hero-section h1 {
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-size: 2.25rem; /* text-4xl */
+            line-height: 2.5rem;
+            font-weight: 700; /* Bold text */
+            color: #8B4513; /* Saddle brown */
+            margin-bottom: 1rem; /* mb-4 */
+            line-height: 1.25; /* leading-tight */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .hero-section h1 {
+                font-size: 3rem; /* sm:text-5xl */
+                line-height: 1;
+            }
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .hero-section h1 {
+                font-size: 3.75rem; /* md:text-6xl */
+            }
+        }
+        .hero-section .subtitle {
+            font-size: 1.25rem; /* text-xl */
+            line-height: 1.75rem;
+            color: #6F4E37; /* Coffee brown */
+            margin-bottom: 1.5rem; /* mb-6 */
+            font-weight: 500; /* font-medium */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .hero-section .subtitle {
+                font-size: 1.5rem; /* sm:text-2xl */
+                line-height: 2rem;
+            }
+        }
+        .hero-section .brand-name {
+            color: #FF8C00; /* Dark Orange */
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-weight: 700; /* Bold text */
+        }
+        .hero-section .description {
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75rem;
+            color: #6F4E37; /* Coffee brown */
+            max-width: 48rem; /* max-w-3xl */
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .hero-section .description {
+                font-size: 1.25rem; /* sm:text-xl */
+                line-height: 1.75rem;
+            }
+        }
+
+        /* About Section Specifics */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .about-content {
+                flex-direction: row;
+                gap: 2rem; /* md:space-x-8 */
+            }
+        }
+        .about-image-container {
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .about-image-container {
+                width: 33.333333%; /* md:w-1/3 */
+                margin-bottom: 0; /* md:mb-0 */
+            }
+        }
+        .about-image {
+            border-radius: 9999px; /* rounded-full */
+            width: 12rem; /* w-48 */
+            height: 12rem; /* h-48 */
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .about-image {
+                margin-left: 0; /* md:mx-0 */
+                margin-right: 0; /* md:mx-0 */
+            }
+        }
+        .about-text-content {
+            color: #6F4E37; /* Coffee brown */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .about-text-content {
+                width: 66.666667%; /* md:w-2/3 */
+            }
+        }
+        .about-text-content p {
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .about-text-content p:last-child {
+            margin-bottom: 0; /* Remove margin from last paragraph if needed */
+        }
+        .about-text-content strong {
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-weight: 700;
+        }
+
+        /* Services Section Specifics */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem; /* gap-8 */
+            color: #6F4E37; /* Coffee brown */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+            }
+        }
+        .services-grid h3 {
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-size: 1.5rem; /* text-2xl */
+            line-height: 2rem;
+            font-weight: 700; /* Bold text */
+            color: #A0522D; /* Sienna brown */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .services-grid ul {
+            list-style-type: none; /* Removed bullet points */
+            list-style-position: inside;
+            margin-top: 0.25rem; /* space-y-1 */
+            padding-left: 0; /* Remove default padding for list */
+        }
+        .services-grid ul li {
+            margin-bottom: 0.25rem; /* space-y-1 */
+        }
+        .services-grid ul li:last-child {
+            margin-bottom: 0;
+        }
+        .services-footer-text {
+            margin-top: 2rem; /* mt-8 */
+            text-align: center;
+            color: #6F4E37; /* Coffee brown */
+        }
+
+        /* Hobbies Section Specifics */
+        .hobbies-content {
+            color: #6F4E37; /* Coffee brown */
+            text-align: center;
+        }
+        .hobbies-content p {
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .hobbies-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem; /* gap-4 */
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75rem;
+            font-weight: 500; /* font-medium */
+            list-style-type: none; /* Removed bullet points */
+            padding-left: 0; /* Remove default padding for list */
+        }
+        .hobby-item {
+            padding: 0.5rem 1rem; /* px-4 py-2 */
+            border-radius: 9999px; /* rounded-full */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+        }
+        .hobby-item span {
+            margin-right: 0.5rem; /* mr-2 */
+        }
+        .hobby-item.cooking { /* Renamed from blue */
+            background-color: #FFF0DB; /* Light orange */
+            color: #FF8C00; /* Dark orange */
+        }
+        .hobby-item.volunteering { /* Renamed from green */
+            background-color: #FBEEDD; /* Light cream/orange */
+            color: #A0522D; /* Sienna brown */
+        }
+        .hobby-item.reading { /* Renamed from yellow */
+            background-color: #FDF8F3; /* Very light cream */
+            color: #8B4513; /* Saddle brown */
+        }
+        .hobbies-footer-text {
+            margin-top: 1rem; /* mt-4 */
+            color: #6F4E37; /* Coffee brown */
+        }
+
+        /* Tech Journey Section Specifics */
+        .tech-journey-content {
+            color: #6F4E37; /* Coffee brown */
+        }
+        .tech-journey-content p {
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .tech-journey-content ul {
+            list-style-type: none; /* Removed bullet points */
+            list-style-position: inside;
+            margin-top: 0.5rem; /* space-y-2 */
+            margin-bottom: 1rem; /* mb-4 */
+            padding-left: 0; /* Remove default padding for list */
+        }
+        .tech-journey-content ul li {
+            margin-bottom: 0.5rem; /* space-y-2 */
+        }
+        .tech-journey-content ul li:last-child {
+            margin-bottom: 0;
+        }
+        .tech-journey-content strong {
+            font-family: 'Roboto', sans-serif; /* Roboto for bold text */
+            font-weight: 700; /* Ensure bolding for strong tags */
+        }
+
+        /* Contact Section Specifics */
+        .contact-content {
+            text-align: center;
+            color: #6F4E37; /* Coffee brown */
+        }
+        .contact-content p {
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .contact-content .email-link,
+        .contact-content .website-link {
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75rem;
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 0.5rem; /* mb-2 */
+            display: block; /* Ensure links take full width for margin */
+        }
+        .contact-content a {
+            color: #FF8C00; /* Dark Orange */
+            transition: text-decoration 0.3s ease;
+        }
+        .contact-content a:hover {
+            text-decoration: underline;
+        }
+        .contact-content .email-link {
+            margin-bottom: 0.5rem;
+        }
+        .contact-content .website-link {
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .contact-content .linkedin-button {
+            margin-top: 1.5rem; /* Adjust if needed, as btn-primary has padding */
+        }
+
+        /* Footer Specifics */
+        .footer {
+            background-color: #6F4E37; /* Coffee brown */
+            color: #ffffff;
+            padding-top: 1.5rem; /* py-6 */
+            padding-bottom: 1.5rem; /* py-6 */
+            text-align: center;
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-title">Mary Khakame</div>
+            <nav class="header-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#hobbies" class="nav-link">Hobbies</a>
+                <a href="#tech-journey" class="nav-link">Tech Journey</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-8">
+
+        <!-- Hero Section -->
+        <section id="home" class="card hero-section">
+            <h1>Mary Khakame</h1>
+            <p class="subtitle">
+                Founder of <span class="brand-name">Creative Akili</span>
+            </p>
+            <p class="description">
+                Your Business Consultant Specialist, empowering startups and building ventures tailored for the dynamic Kenyan market.
+            </p>
+            <a href="#about" class="btn-primary">Learn More About Me</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="card">
+            <h2 class="section-heading">About Mary Khakame</h2>
+            <div class="about-content">
+                <div class="about-image-container">
+                    <img src="http://googleusercontent.com/file_content/1" alt="Mary Khakame" class="about-image">
+                </div>
+                <div class="about-text-content">
+                    <p>
+                        Hello! I'm Mary Khakame, the passionate founder behind <strong>Creative Akili</strong>. My journey as a business consultant specialist is driven by a deep commitment to nurturing the vibrant entrepreneurial spirit within Kenya. I specialize in working with <strong>startups</strong>, helping aspiring founders transform raw ideas into robust, market-ready businesses.
+                    </p>
+                    <p>
+                        My expertise lies in understanding the unique challenges and immense opportunities present in the <strong>Kenyan market</strong>. I guide entrepreneurs through crucial stages, from idea validation and strategic planning to building strong operational foundations and compelling brand identities.
+                    </p>
+                    <p>
+                        I believe that with the right 'Akili' (intellect and insight) and tailored support, any innovative idea can flourish. My approach is hands-on, collaborative, and always focused on delivering actionable strategies that lead to tangible growth.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="card">
+            <h2 class="section-heading">Creative Akili Services</h2>
+            <div class="services-grid">
+                <div>
+                    <h3>Strategic Business Planning</h3>
+                    <ul>
+                        <li>Idea Generation & Validation</li>
+                        <li>Market Research & Analysis (Kenya-focused)</li>
+                        <li>Basic & Comprehensive Business Plan Development</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Startup Development Support</h3>
+                    <ul>
+                        <li>Early-Stage Business Development Guidance</li>
+                        <li>Brand Building & Storytelling</li>
+                        <li>Operational Foundations & Efficiency</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="services-footer-text">
+                We're here to provide the clarity, confidence, and strategic tools you need to thrive in the Kenyan entrepreneurial landscape.
+            </p>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="card">
+            <h2 class="section-heading">Beyond Business: My Passions</h2>
+            <div class="hobbies-content">
+                <p>When I'm not immersed in the world of startups and strategy, I find joy and inspiration in a few key areas:</p>
+                <ul class="hobbies-list">
+                    <li class="hobby-item cooking">
+                        <span class="mr-2">🍳</span> Cooking
+                    </li>
+                    <li class="hobby-item volunteering">
+                        <span class="mr-2">🤝</span> Volunteering
+                    </li>
+                    <li class="hobby-item reading">
+                        <span class="mr-2">📚</span> Reading a Good Book
+                    </li>
+                </ul>
+                <p class="hobbies-footer-text">These activities fuel my creativity and provide a balanced perspective, which I believe is essential for innovative problem-solving.</p>
+            </div>
+        </section>
+
+        <!-- Tech Journey Section -->
+        <section id="tech-journey" class="card">
+            <h2 class="section-heading">My Tech Journey: Innovating for Tomorrow</h2>
+            <div class="tech-journey-content">
+                <p>
+                    To further enhance Creative Akili's offerings and provide even more cutting-edge solutions, I am currently <strong>studying software development</strong>. This journey is about more than just acquiring new skills; it's about deeply understanding the technological backbone that drives modern businesses.
+                </p>
+                <p>
+                    My goal is to incorporate a robust skill set in software development directly into Creative Akili's services. This will give us a unique advantage in the industry, enabling us to:
+                </p>
+                <ul>
+                    <li><strong>Solve problems technologically:</strong> Developing tailored digital solutions for common startup challenges.</li>
+                    <li><strong>Enhance client interaction:</strong> Creating more intuitive and efficient platforms for our clients to engage with our services and track their progress.</li>
+                    <li><strong>Innovate service delivery:</strong> Exploring new ways to leverage technology to make strategic consulting more accessible and impactful.</li>
+                </ul>
+                <p>
+                    This commitment to continuous learning ensures that Creative Akili remains at the forefront of supporting Kenyan entrepreneurs with the most relevant and effective strategies, both business and technological.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card">
+            <h2 class="section-heading">Connect with Mary Khakame</h2>
+            <div class="contact-content">
+                <p>Ready to transform your business idea into a thriving reality in the Kenyan market?</p>
+                <p>Let's connect and discuss how Creative Akili can support your entrepreneurial journey.</p>
+                <p class="email-link">Email: <a href="mailto:akilicreative18@gmail.com">akilicreative18@gmail.com</a></p>
+                <p class="website-link">Website: <a href="https://www.creativeakili.com" target="_blank">www.creativeakili.com</a></p>
+                <a href="https://www.linkedin.com/in/marykhakame" target="_blank" class="btn-primary linkedin-button">Connect on LinkedIn</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mary Khakame. All rights reserved. | Founder of Creative Akili.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
