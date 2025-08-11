@@ -5,42 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroFlow: Product Showcase & Demo Request</title>
     <meta name="description" content="Explore the features of AstroFlow, a next-gen project management tool. Request a free demo using our HTML5-validated form.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: "Inter", sans-serif;
-            background-color: #f0f4f8;
-            color: #334155;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-        form fieldset {
-            border-color: #cbd5e1;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-        }
-        form legend {
-            font-weight: 600;
-            font-size: 1.25rem;
-            padding: 0 0.5rem;
-            color: #1e293b;
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4">
+<body>
     
-    <main class="container bg-white rounded-xl shadow-lg p-8 space-y-12">
+    <main>
         
-        <section class="space-y-4">
-            <h1 class="text-4xl font-extrabold text-teal-700 text-center">AstroFlow: The Future of Project Management</h1>
-            <p class="text-center text-lg text-gray-600">AstroFlow is a powerful, intuitive tool designed to help your team collaborate seamlessly and deliver projects on time.</p>
+        <section>
+            <h1>AstroFlow: The Future of Project Management</h1>
+            <p>AstroFlow is a powerful, intuitive tool designed to help your team collaborate seamlessly and deliver projects on time.</p>
             
-            <h2 class="text-2xl font-bold text-gray-800 mt-8">Core Features</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <h2>Core Features</h2>
+            <ul>
                 <li>Task Automation: Automate repetitive tasks and focus on what matters most.</li>
                 <li>Real-time Collaboration: Work together with your team in a shared, dynamic environment.</li>
                 <li>Customizable Dashboards: Tailor your workspace to fit your team's unique workflow.</li>
@@ -48,181 +34,114 @@
             </ul>
         </section>
 
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-gray-800">Pricing Tiers</h2>
-            <p class="text-gray-600">Choose the plan that's right for your team.</p>
+        <section>
+            <h2>Pricing Tiers</h2>
+            <p>Choose the plan that's right for your team.</p>
             
-            <div class="overflow-x-auto rounded-lg shadow-sm border border-gray-200">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-teal-600 text-white">
+            <div>
+                <table>
+                    <thead>
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Plan</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Price (per user/mo)</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Features</th>
+                            <th scope="col">Plan</th>
+                            <th scope="col">Price (per user/mo)</th>
+                            <th scope="col">Features</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap font-bold">Starter</td>
-                            <td class="px-6 py-4 whitespace-nowrap">$10</td>
-                            <td class="px-6 py-4">Basic features, 5GB storage</td>
+                    <tbody>
+                        <tr>
+                            <td>Starter</td>
+                            <td>$10</td>
+                            <td>Basic features, 5GB storage</td>
                         </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap font-bold">Pro</td>
-                            <td class="px-6 py-4 whitespace-nowrap">$25</td>
-                            <td class="px-6 py-4">Everything in Starter + Advanced reporting, 20GB storage</td>
+                        <tr>
+                            <td>Pro</td>
+                            <td>$25</td>
+                            <td>Everything in Starter + Advanced reporting, 20GB storage</td>
                         </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap font-bold">Enterprise</td>
-                            <td class="px-6 py-4 whitespace-nowrap">Contact Us</td>
-                            <td class="px-6 py-4">Pro features + Dedicated support, unlimited storage</td>
+                        <tr>
+                            <td>Enterprise</td>
+                            <td>Contact Us</td>
+                            <td>Pro features + Dedicated support, unlimited storage</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-gray-800">Seamless Integration</h2>
-            <p class="text-gray-600">A visual representation of AstroFlow's seamless integrations.</p>
-            <img 
-                src="https://placehold.co/800x400/0d9488/FFFFFF?text=AstroFlow+Integrations" 
-                alt="A user-friendly dashboard of AstroFlow showing integrations with popular apps like Slack, Google Drive, and GitHub." 
-                class="w-full rounded-lg shadow-md"
-            >
+        <section>
+            <h2>Seamless Integration</h2>
+            <p>A video demonstration of AstroFlow's seamless integrations.</p>
+            <video width="100%" height="auto" controls autoplay loop>
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
 
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-gray-800">Request a Demo</h2>
-            <p class="text-gray-600">Fill out the form below to schedule a free demo of AstroFlow. Required fields are marked with an asterisk (*).</p>
+        <section>
+            <h2>Request a Demo</h2>
+            <p>Fill out the form below to schedule a free demo of AstroFlow. Required fields are marked with an asterisk (*).</p>
             
-            <form action="#" method="post" class="space-y-6">
-                <fieldset class="space-y-4">
-                    <legend class="text-xl">Contact Information</legend>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="flex flex-col">
-                            <label for="name" class="mb-1 font-medium">Your Name *</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                placeholder="e.g., Alex Johnson"
-                                class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                                required
-                                autocomplete="name"
-                            >
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div>
+                        <div>
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         
-                        <div class="flex flex-col">
-                            <label for="workEmail" class="mb-1 font-medium">Work Email *</label>
-                            <input 
-                                type="email" 
-                                id="workEmail" 
-                                name="workEmail" 
-                                placeholder="e.g., alex.j@company.com"
-                                class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                                required
-                                autocomplete="email"
-                            >
+                        <div>
+                            <label for="workEmail">Work Email *</label>
+                            <input type="email" id="workEmail" name="workEmail" required>
                         </div>
                     </div>
                     
-                    <div class="flex flex-col">
-                        <label for="company" class="mb-1 font-medium">Company Name</label>
-                        <input 
-                            type="text" 
-                            id="company" 
-                            name="company" 
-                            placeholder="e.g., Tech Solutions Inc."
-                            class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                            autocomplete="organization"
-                        >
+                    <div>
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
                     </div>
 
-                    <div class="flex flex-col">
-                        <label for="employees" class="mb-1 font-medium">Number of Employees</label>
-                        <input 
-                            type="number" 
-                            id="employees" 
-                            name="employees" 
-                            placeholder="e.g., 50"
-                            class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                            min="1" 
-                            max="5000"
-                        >
+                    <div>
+                        <label for="employees">Number of Employees</label>
+                        <input type="number" id="employees" name="employees" min="1" max="5000">
                     </div>
                 </fieldset>
 
-                <fieldset class="space-y-4">
-                    <legend class="text-xl">Demo Preferences</legend>
+                <fieldset>
+                    <legend>Demo Preferences</legend>
                     
-                    <div class="flex flex-col">
-                        <label for="questions" class="mb-1 font-medium">Specific Questions *</label>
-                        <textarea 
-                            id="questions" 
-                            name="questions" 
-                            rows="5"
-                            placeholder="Tell us what you'd like to see in the demo (min 30 characters)"
-                            class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                            required
-                            minlength="30"
-                        ></textarea>
+                    <div>
+                        <label for="questions">Specific Questions *</label>
+                        <textarea id="questions" name="questions" rows="5" required minlength="30"></textarea>
                     </div>
                 </fieldset>
 
-                <fieldset class="space-y-4">
-                    <legend class="text-xl">Additional Details</legend>
+                <fieldset>
+                    <legend>Additional Details</legend>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="flex flex-col">
-                            <label for="demoDate" class="mb-1 font-medium">Preferred Demo Date</label>
-                            <input 
-                                type="date" 
-                                id="demoDate" 
-                                name="demoDate" 
-                                class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                            >
+                    <div>
+                        <div>
+                            <label for="demoDate">Preferred Demo Date</label>
+                            <input type="date" id="demoDate" name="demoDate">
                         </div>
                         
-                        <div class="flex flex-col">
-                            <label for="demoTime" class="mb-1 font-medium">Preferred Demo Time</label>
-                            <input 
-                                type="time" 
-                                id="demoTime" 
-                                name="demoTime" 
-                                class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                            >
+                        <div>
+                            <label for="demoTime">Preferred Demo Time</label>
+                            <input type="time" id="demoTime" name="demoTime">
                         </div>
                         
-                        <div class="flex flex-col">
-                            <label for="companyWebsite" class="mb-1 font-medium">Company Website</label>
-                            <input 
-                                type="url" 
-                                id="companyWebsite" 
-                                name="companyWebsite" 
-                                placeholder="e.g., https://www.company.com"
-                                class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                                autocomplete="url"
-                            >
+                        <div>
+                            <label for="companyWebsite">Company Website</label>
+                            <input type="url" id="companyWebsite" name="companyWebsite">
                         </div>
 
-                        <input 
-                            type="hidden" 
-                            id="source" 
-                            name="source" 
-                            value="web-showcase"
-                        >
+                        <input type="hidden" id="source" name="source" value="web-showcase">
 
                     </div>
                 </fieldset>
 
-                <div class="flex justify-center">
-                    <button 
-                        type="submit" 
-                        class="px-8 py-3 bg-teal-600 text-white font-bold rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-colors"
-                    >
-                        Request Demo
-                    </button>
+                <div>
+                    <button type="submit">Request Demo</button>
                 </div>
             </form>
         </section>
