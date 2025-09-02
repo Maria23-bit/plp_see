@@ -1,0 +1,38 @@
+/* Basic styling */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+/* Part 2: Dark Theme styles */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Part 3: Form validation styles */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
