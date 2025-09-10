@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Animation Assignment</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans flex flex-col items-center p-8">
+
+    <div class="max-w-4xl w-full">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">Web Page Animation Assignment</h1>
+            <p class="text-lg text-gray-600">Bringing Web Pages to Life with CSS & JavaScript</p>
+        </header>
+
+        <!-- Part 1: CSS3 Transitions and Animations -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border border-gray-200">
+            <h2 class="text-3xl font-bold mb-4">Part 1: CSS3 Effects</h2>
+            <div class="flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0 md:space-x-8">
+                <!-- Button Hover Effect -->
+                <button id="hoverButton" class="hover-effect bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md">
+                    Hover Over Me!
+                </button>
+                <!-- Continuous Keyframe Animation -->
+                <div class="pulsing-box bg-gray-600 text-white w-24 h-24 flex items-center justify-center rounded-full text-center font-bold shadow-md">
+                    Pulse
+                </div>
+            </div>
+        </section>
+
+        <!--Part 2: JavaScript Functions -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border border-gray-200">
+            <h2 class="text-3xl font-bold mb-4">Part 2: JavaScript Functions</h2>
+            <p class="text-gray-700 mb-4">
+                Enter two numbers below to see a reusable function at work.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
+                <input type="number" id="num1" value="10" class="p-2 rounded-lg border border-gray-300 w-full sm:w-auto">
+                <input type="number" id="num2" value="20" class="p-2 rounded-lg border border-gray-300 w-full sm:w-auto">
+                <button id="calculateButton" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover-effect">
+                    Calculate Sum
+                </button>
+            </div>
+            <p id="resultText" class="text-xl font-bold text-gray-800"></p>
+        </section>
+
+        <!-- Part 3: Combining CSS Animations with JavaScript -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border border-gray-200">
+            <h2 class="text-3xl font-bold mb-4">Part 3: CSS & JavaScript Combined</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <!-- Trigger a slide-in animation -->
+                <button id="triggerAnimation" class="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover-effect">
+                    Slide In Box
+                </button>
+                <div id="animatedBox" class="w-32 h-32 bg-yellow-400 rounded-lg flex items-center justify-center text-center font-bold text-gray-900 shadow-md">
+                    Click
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to the external script file -->
+    <script src="script.js"></script>
+</body>
+</html>

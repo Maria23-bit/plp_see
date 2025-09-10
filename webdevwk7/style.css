@@ -1,0 +1,47 @@
+/*
+ * 🎨✨ Part 1: CSS3 Transitions and Animations
+ * This section uses CSS to create visual effects that respond to interaction or are continuous.
+ */
+
+/* Button Hover Effect: A smooth scale and background change on hover */
+.hover-effect {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.hover-effect:hover {
+    transform: scale(1.05);
+    background-color: #2e4a6a;
+}
+
+/* Continuous Keyframe Animation: A pulse effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 74, 106, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(46, 74, 106, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 74, 106, 0);
+    }
+}
+.pulsing-box {
+    animation: pulse 2s infinite;
+}
+
+/* JavaScript-Triggered Animation: A slide-in effect */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.slide-in {
+    animation: slideInFromTop 0.5s ease-out forwards;
+}
